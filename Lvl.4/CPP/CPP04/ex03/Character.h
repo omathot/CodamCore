@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 20:35:18 by oscarmathot       #+#    #+#             */
-/*   Updated: 2024/04/07 15:08:23 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2024/04/07 17:06:40 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ public:
 	Character&	operator=(const Character &src);
 
 	std::string const &getName() const;
-	void equip(AMateria *m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
-	void	outputDiscardList();
+	void	equip(AMateria *m);
+	void	unequip(int idx);
+	void	use(int idx, ICharacter& target);
+	void	outputDiscardList() const;
+	void	outputInventory() const;
 
 };
 

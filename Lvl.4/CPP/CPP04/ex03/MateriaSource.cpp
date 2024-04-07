@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 21:35:41 by oscarmathot       #+#    #+#             */
-/*   Updated: 2024/04/07 15:48:39 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2024/04/07 16:29:04 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &src) {
 
 void	MateriaSource::learnMateria(AMateria *m) {
 	if (m == NULL) {
-		std::cout << "Not storing a null Materia in my inventory that's useless" << std::endl;
+		std::cout << "Not storing a null Materia in my MateriaSource inventory that's useless" << std::endl;
 		return ;
 	}
 	for (int i = 0; i < 4; i++) {

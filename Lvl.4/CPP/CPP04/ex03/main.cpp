@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 19:31:23 by oscarmathot       #+#    #+#             */
-/*   Updated: 2024/04/07 15:52:25 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2024/04/07 17:15:40 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,10 @@ int main()
 	tmp = src->createMateria("ice");
 	me->equip(tmp); //should not be added to inventory (full !)
 	
+	std::cout << std::endl << "----------CHARACTER INVENTORY----------" << std::endl << std::endl;
+	me->outputInventory();
+	std::cout << "--------------------------------" << std::endl;
+
 	std::cout << std::endl << "----------USE MATERIAS----------" << std::endl << std::endl;
 	ICharacter* bob = new Character("bob");
 	std::cout << "test " << bob->getName() << " test" << std::endl;
@@ -57,6 +61,10 @@ int main()
 	me->unequip(2);
 	me->unequip(3);
 
+	std::cout << std::endl << "----------DISCARDLIST----------" << std::endl << std::endl;
+	me->outputDiscardList();
+	std::cout << "--------------------------------" << std::endl;
+	
 	std::cout << std::endl << "----------WRONG USAGE PROTECTED----------" << std::endl << std::endl;
 	AMateria *test = NULL; // empty Materia
 	me->use(2, *bob);
@@ -64,8 +72,8 @@ int main()
 	me->equip(test);
 	src->learnMateria(test);
 
-	std::cout << std::endl << "----------DISCARDLIST----------" << std::endl << std::endl;
-	me->outputDiscardList();
+	std::cout << std::endl << "----------CHARACTER INVENTORY----------" << std::endl << std::endl;
+	me->outputInventory();
 	std::cout << "--------------------------------" << std::endl;
 
 	std::cout << std::endl << "----------DELETES----------" << std::endl << std::endl;

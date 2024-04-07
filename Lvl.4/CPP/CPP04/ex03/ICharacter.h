@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 19:37:39 by oscarmathot       #+#    #+#             */
-/*   Updated: 2024/04/07 13:57:52 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2024/04/07 17:05:45 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ public:
 	virtual void equip(AMateria *m) = 0;
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
-	virtual	void	outputDiscardList() = 0;
+	virtual	void	outputDiscardList() const = 0;
+	virtual void	outputInventory() const = 0;
 };
 
 #endif

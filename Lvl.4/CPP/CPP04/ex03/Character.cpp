@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 20:43:40 by oscarmathot       #+#    #+#             */
-/*   Updated: 2024/04/07 15:37:14 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2024/04/07 17:07:35 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,9 +115,16 @@ const std::string	&Character::getName() const {
 	return (this->_name);
 }
 
-void	Character::outputDiscardList() {
+void	Character::outputDiscardList() const {
 	for (int i = 0; i < 50; i++) {
 		if (this->_listDiscarded[i] != NULL)
 			std::cout << _listDiscarded[i]->getType() << " in discardList at idx: " << i << std::endl;
+	}
+}
+
+void	Character::outputInventory() const {
+	for (int i = 0; i < 4; i++) {
+		if (this->_inventory[i] != NULL)
+			std::cout << _inventory[i]->getType() << " in Character Inventory at index: " << i << std::endl;
 	}
 }
